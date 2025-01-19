@@ -28,3 +28,16 @@ function limparCampo(){
     let amigoSelecionado = document.getElementById('amigo');
     amigoSelecionado.value = '';
 }
+
+
+function sortearAmigo(){
+    if (amigos.length < 2) {
+        alert('Insira mais amigos para sortear');
+    }
+    let numeroMaximo = amigos.length;
+    let numeroSorteado = parseInt(Math.random() * numeroMaximo + 1);
+    listaParaInserir.innerHTML = '';
+    listaParaInserir.innerHTML = `A pessoa sorteada foi ${amigos[numeroSorteado]} :D`;
+
+
+}   
